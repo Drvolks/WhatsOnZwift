@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Map selection: "LONDON", "WATOPIA", "RICHMOND" -->
+<!-- Date/times are "ISO 8601" format in UTC (i.e. GMT) (eg. 2016-09-14T08:26-08 where "-08" is the time zone and can be omitted) (See: https://en.wikipedia.org/wiki/ISO_8601) -->
+<!-- Note: The entries do not have to be in chronological order -->
+<MapSchedule>
+    <appointments>
+        <!-- Oct -->
+        <appointment map="WATOPIA"     start="2018-10-01T00:01-04"/>
+        <appointment map="LONDON"      start="2018-10-04T00:01-04"/>
+        <appointment map="WATOPIA"     start="2018-10-06T00:01-04"/>
+        <appointment map="LONDON"      start="2018-10-12T00:01-04"/>
+        <appointment map="WATOPIA"     start="2018-10-14T00:01-04"/>
+        <appointment map="INNSBRUCK"   start="2018-10-15T00:01-04"/>
+        <appointment map="WATOPIA"     start="2018-10-16T00:01-04"/>
+        <appointment map="NEWYORK"     start="2018-10-19T00:01-04"/>
+        <appointment map="WATOPIA"     start="2018-10-26T00:01-04"/>
+        <appointment map="NEWYORK"     start="2018-10-28T00:01-04"/>
+        <appointment map="WATOPIA"     start="2018-10-31T00:01-04"/>
+        
+        <!-- Nov -->
+        <appointment map="NEWYORK"     start="2018-11-01T00:01-04"/>
+        <appointment map="WATOPIA"     start="2018-11-04T00:01-04"/>
+        <appointment map="NEWYORK"     start="2018-11-06T00:01-04"/>
+        <appointment map="LONDON"      start="2018-11-08T00:01-04"/>
+        <appointment map="WATOPIA"     start="2018-11-10T00:01-04"/>
+        <appointment map="INNSBRUCK"   start="2018-11-12T00:01-04"/>
+        <appointment map="WATOPIA"     start="2018-11-13T00:01-04"/>
+        <appointment map="NEWYORK"     start="2018-11-16T00:01-04"/>
+        <appointment map="WATOPIA"     start="2018-11-18T00:01-04"/>
+        <appointment map="NEWYORK"     start="2018-11-21T00:01-04"/>
+        <appointment map="LONDON"      start="2018-11-24T00:01-04"/>
+        <appointment map="WATOPIA"     start="2018-11-27T00:01-04"/>
+        <appointment map="INNSBRUCK"   start="2018-11-30T00:01-04"/>
+    </appointments>
+    <VERSION>1</VERSION>
+</MapSchedule>
