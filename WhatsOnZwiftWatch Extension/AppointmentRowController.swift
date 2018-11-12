@@ -1,0 +1,22 @@
+import Foundation
+import WatchKit
+
+class AppointmentRowController : NSObject {
+    @IBOutlet weak var mapImage: WKInterfaceImage!
+    @IBOutlet weak var startDate: WKInterfaceLabel!
+    @IBOutlet weak var map: WKInterfaceLabel!
+    
+    func fromAppointment(appointment: Appointment) {
+        WatchFontHelper.setMapText(label: map, appointment: appointment)
+
+        mapImage.setImage(UIImage(named: appointment.map.rawValue.lowercased()))
+        
+        if appointment.map != Map.UNKNOWN {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd-MM HH:mm"
+            startDate.setText(formatter.string(from: appointment.start))
+        } else {
+            startDate.setText("")
+        }
+    }
+}
