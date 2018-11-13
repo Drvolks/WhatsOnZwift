@@ -127,6 +127,7 @@
 		6E3528372199F336005C44EC /* AppointmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentCell.swift; sourceTree = "<group>"; };
 		6E3528392199FBB3005C44EC /* AppointmentRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentRowController.swift; sourceTree = "<group>"; };
 		6EDD3951219A092B00E3A3BC /* MapScheduleUnsorted.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MapScheduleUnsorted.xml; sourceTree = "<group>"; };
+		6EDD3953219A0D1500E3A3BC /* WhatsOnZwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhatsOnZwift.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +180,7 @@
 		6E33BB522199D17F00C85EEF /* WhatsOnZwift */ = {
 			isa = PBXGroup;
 			children = (
+				6EDD3953219A0D1500E3A3BC /* WhatsOnZwift.entitlements */,
 				6E33BB752199D1AA00C85EEF /* xml */,
 				6E33BB532199D17F00C85EEF /* AppDelegate.swift */,
 				6E33BB552199D17F00C85EEF /* FirstViewController.swift */,
@@ -326,6 +328,11 @@
 				TargetAttributes = {
 					6E33BB4F2199D17F00C85EEF = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					6E33BB652199D18100C85EEF = {
 						CreatedOnToolsVersion = 10.1;
@@ -619,6 +626,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 654X66AK24;
 				INFOPLIST_FILE = WhatsOnZwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -629,6 +637,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -637,6 +646,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 654X66AK24;
 				INFOPLIST_FILE = WhatsOnZwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -647,6 +657,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -656,6 +667,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 654X66AK24;
 				INFOPLIST_FILE = WhatsOnZwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -668,6 +680,7 @@
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhatsOnZwift.app/WhatsOnZwift";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -677,6 +690,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 654X66AK24;
 				INFOPLIST_FILE = WhatsOnZwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -689,6 +703,7 @@
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhatsOnZwift.app/WhatsOnZwift";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -697,6 +712,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 654X66AK24;
 				INFOPLIST_FILE = "WhatsOnZwiftWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -710,6 +726,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
 				WATCHOS_DEPLOYMENT_TARGET = 5.1;
 			};
 			name = Debug;
@@ -719,6 +736,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 654X66AK24;
 				INFOPLIST_FILE = "WhatsOnZwiftWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -732,6 +750,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
 				WATCHOS_DEPLOYMENT_TARGET = 5.1;
 			};
 			name = Release;
@@ -742,6 +761,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 654X66AK24;
 				IBSC_MODULE = WhatsOnZwiftWatch_Extension;
 				INFOPLIST_FILE = WhatsOnZwiftWatch/Info.plist;
@@ -751,6 +771,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
 				WATCHOS_DEPLOYMENT_TARGET = 5.1;
 			};
 			name = Debug;
@@ -761,6 +782,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 654X66AK24;
 				IBSC_MODULE = WhatsOnZwiftWatch_Extension;
 				INFOPLIST_FILE = WhatsOnZwiftWatch/Info.plist;
@@ -770,6 +792,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
 				WATCHOS_DEPLOYMENT_TARGET = 5.1;
 			};
 			name = Release;
