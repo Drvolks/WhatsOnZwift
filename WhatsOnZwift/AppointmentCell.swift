@@ -19,12 +19,9 @@ class AppointmentCell: UITableViewCell {
         mapImage.image = UIImage(named: appointment.map.rawValue.lowercased())
         
         if appointment.map != Map.UNKNOWN {
-            let calendar = NSCalendar.init(calendarIdentifier: NSCalendar.Identifier.gregorian)
-            let currentMonth = (calendar?.component(NSCalendar.Unit.month, from: appointment.start))!
-            let currentYear = (calendar?.component(NSCalendar.Unit.year, from: appointment.start))!
-            let currentDay = (calendar?.component(NSCalendar.Unit.day, from: appointment.start))!
-            
-            startDate.text = String(currentDay) + "-" + String(currentMonth) + "-" + String(currentYear)
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd-MM-yyyy HH:mm"
+            startDate.text = formatter.string(from: appointment.start)
         } else {
             startDate.text = ""
         }
