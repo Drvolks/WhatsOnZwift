@@ -14,6 +14,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WhatsOnZwiftWatch" customModuleProvider="target">
                     <items>
+                        <imageView width="100" height="100" alignment="center" image="refresh" id="Gae-Ot-D7H"/>
                         <label width="136" height="32" alignment="left" text="Label" id="68J-E2-InO"/>
                         <imageView alignment="left" contentMode="scaleAspectFit" id="1us-7A-Cmj"/>
                         <label alignment="left" text="What's next" id="bBs-1k-aT5"/>
@@ -45,6 +46,7 @@
                         <outlet property="map" destination="68J-E2-InO" id="2Wi-Zh-Wp4"/>
                         <outlet property="mapImage" destination="1us-7A-Cmj" id="1vb-dw-Lga"/>
                         <outlet property="nextLabel" destination="bBs-1k-aT5" id="692-fa-DEC"/>
+                        <outlet property="refreshImage" destination="Gae-Ot-D7H" id="BlF-DF-fHT"/>
                     </connections>
                 </controller>
             </objects>

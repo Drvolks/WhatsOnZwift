@@ -15,14 +15,20 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var mapImage: WKInterfaceImage!
     @IBOutlet weak var futureTable: WKInterfaceTable!
     @IBOutlet weak var nextLabel: WKInterfaceLabel!
+    @IBOutlet weak var refreshImage: WKInterfaceImage!
     
     var task: URLSessionDataTask?
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+    }
+    
+    override func willActivate() {
+        super.willActivate()
         
         nextLabel.setHidden(true)
         map.setHidden(true)
+        refreshImage.setHidden(false)
         
         nextLabel.setHeight(CGFloat(50))
         
@@ -46,6 +52,7 @@ class InterfaceController: WKInterfaceController {
                 
                 self.map.setHidden(false)
                 self.nextLabel.setHidden(false)
+                self.refreshImage.setHidden(true)
                 
                 self.futureTable.setNumberOfRows(futureAppointments.count, withRowType: "appointmentRow")
                 
@@ -55,12 +62,8 @@ class InterfaceController: WKInterfaceController {
                 }
             }
         }
-    
+        
         task!.resume()
-    }
-    
-    override func willActivate() {
-        super.willActivate()
     }
     
     override func didDeactivate() {
