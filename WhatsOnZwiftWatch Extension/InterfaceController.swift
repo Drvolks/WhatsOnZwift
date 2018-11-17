@@ -17,8 +17,6 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var nextLabel: WKInterfaceLabel!
     @IBOutlet weak var refreshImage: WKInterfaceImage!
     
-    var task: URLSessionDataTask?
-    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
     }
@@ -32,11 +30,10 @@ class InterfaceController: WKInterfaceController {
         
         nextLabel.setHeight(CGFloat(50))
         
-        let url = NSURL(string:ZwiftXmlParser.urlString)!
-        let conf = URLSessionConfiguration.default
-        let session = URLSession(configuration: conf)
-        
-        task = session.dataTask(with: url as URL) { (data, res, error) -> Void in
+        let url = URL(string:ZwiftXmlParser.urlString)!
+        var request = URLRequest(url: url)
+        request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringLocalCacheData
+        URLSession.shared.dataTask(with: request) { (data, res, error) -> Void in
             if error != nil {
                 print("dataTaskWithURL fail")
                 return
@@ -61,9 +58,7 @@ class InterfaceController: WKInterfaceController {
                     controller.fromAppointment(appointment: futureAppointments[index])
                 }
             }
-        }
-        
-        task!.resume()
+            }.resume()
     }
     
     override func didDeactivate() {
