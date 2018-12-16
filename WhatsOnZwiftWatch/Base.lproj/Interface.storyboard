@@ -14,20 +14,28 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WhatsOnZwiftWatch" customModuleProvider="target">
                     <items>
-                        <imageView width="100" height="100" alignment="center" image="refresh" id="Gae-Ot-D7H"/>
-                        <label width="136" height="32" alignment="left" text="Label" id="68J-E2-InO"/>
-                        <imageView alignment="left" contentMode="scaleAspectFit" id="1us-7A-Cmj"/>
+                        <group width="1" alignment="left" layout="overlap" id="fOK-rV-WYo">
+                            <items>
+                                <imageView alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" id="1us-7A-Cmj"/>
+                                <label alignment="center" verticalAlignment="center" text="Label" textAlignment="center" baselineAdjustment="alignCenters" id="68J-E2-InO">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="36"/>
+                                </label>
+                            </items>
+                        </group>
                         <label alignment="left" text="What's next" id="bBs-1k-aT5"/>
                         <table alignment="left" id="6Yu-WD-gst">
                             <items>
                                 <tableRow identifier="appointmentRow" selectable="NO" id="MJk-nk-yKp" customClass="AppointmentRowController" customModule="WhatsOnZwiftWatch_Extension">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="umU-qb-JkA">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="umU-qb-JkA">
                                         <items>
-                                            <imageView width="50" height="40" alignment="left" contentMode="scaleAspectFit" id="f3u-oI-O5t"/>
-                                            <group width="1" alignment="left" layout="vertical" id="Tii-0r-8JU">
+                                            <label alignment="left" text="Label" id="OGD-nG-dEr"/>
+                                            <group width="1" alignment="left" layout="overlap" id="Tii-0r-8JU">
                                                 <items>
-                                                    <label alignment="left" text="Label" id="OGD-nG-dEr"/>
-                                                    <label alignment="left" text="Label" id="LE9-b0-fwG"/>
+                                                    <imageView alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" id="f3u-oI-O5t"/>
+                                                    <label alignment="center" verticalAlignment="center" text="Label" textAlignment="center" baselineAdjustment="alignCenters" id="LE9-b0-fwG">
+                                                        <fontDescription key="font" type="boldSystem" pointSize="36"/>
+                                                    </label>
                                                 </items>
                                             </group>
                                         </items>
@@ -46,7 +54,6 @@
                         <outlet property="map" destination="68J-E2-InO" id="2Wi-Zh-Wp4"/>
                         <outlet property="mapImage" destination="1us-7A-Cmj" id="1vb-dw-Lga"/>
                         <outlet property="nextLabel" destination="bBs-1k-aT5" id="692-fa-DEC"/>
-                        <outlet property="refreshImage" destination="Gae-Ot-D7H" id="BlF-DF-fHT"/>
                     </connections>
                 </controller>
             </objects>

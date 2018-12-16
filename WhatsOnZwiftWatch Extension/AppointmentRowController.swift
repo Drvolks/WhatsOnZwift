@@ -15,7 +15,8 @@ class AppointmentRowController : NSObject {
     @IBOutlet weak var map: WKInterfaceLabel!
     
     func fromAppointment(appointment: Appointment) {
-        map.setText(AppointmentUtils.getName(appointment: appointment))
+        WatchFontHelper.setMapText(label: map, appointment: appointment)
+
         mapImage.setImage(UIImage(named: appointment.map.rawValue.lowercased()))
         
         if appointment.map != Map.UNKNOWN {

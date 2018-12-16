@@ -32,6 +32,7 @@
 		6E3528362199EF51005C44EC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3528352199EF51005C44EC /* Extensions.swift */; };
 		6E3528382199F336005C44EC /* AppointmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3528372199F336005C44EC /* AppointmentCell.swift */; };
 		6E35283A2199FBB3005C44EC /* AppointmentRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3528392199FBB3005C44EC /* AppointmentRowController.swift */; };
+		6ECEF31F21C6EB66002EB612 /* WatchFontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECEF31E21C6EB66002EB612 /* WatchFontHelper.swift */; };
 		6EDD394A2199FCD800E3A3BC /* AppointmentUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E33BBA92199E0D000C85EEF /* AppointmentUtils.swift */; };
 		6EDD394B2199FCEC00E3A3BC /* ZwiftXmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E33BB9F2199D21600C85EEF /* ZwiftXmlParser.swift */; };
 		6EDD394C2199FD1500E3A3BC /* XmlParserBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E33BB762199D1B700C85EEF /* XmlParserBase.swift */; };
@@ -127,6 +128,7 @@
 		6E3528372199F336005C44EC /* AppointmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentCell.swift; sourceTree = "<group>"; };
 		6E3528392199FBB3005C44EC /* AppointmentRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentRowController.swift; sourceTree = "<group>"; };
 		6E728986219A504900F0B3D9 /* WhatsOnZwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhatsOnZwift.entitlements; sourceTree = "<group>"; };
+		6ECEF31E21C6EB66002EB612 /* WatchFontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFontHelper.swift; sourceTree = "<group>"; };
 		6EDD3951219A092B00E3A3BC /* MapScheduleUnsorted.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MapScheduleUnsorted.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -238,6 +240,7 @@
 				6E33BB912199D1CD00C85EEF /* Assets.xcassets */,
 				6E33BB932199D1CD00C85EEF /* Info.plist */,
 				6E3528392199FBB3005C44EC /* AppointmentRowController.swift */,
+				6ECEF31E21C6EB66002EB612 /* WatchFontHelper.swift */,
 			);
 			path = "WhatsOnZwiftWatch Extension";
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 			files = (
 				6EDD394C2199FD1500E3A3BC /* XmlParserBase.swift in Sources */,
 				6E33BB8E2199D1CC00C85EEF /* ExtensionDelegate.swift in Sources */,
+				6ECEF31F21C6EB66002EB612 /* WatchFontHelper.swift in Sources */,
 				6EDD394A2199FCD800E3A3BC /* AppointmentUtils.swift in Sources */,
 				6EDD394D2199FD1D00E3A3BC /* Appointment.swift in Sources */,
 				6E33BB8C2199D1CC00C85EEF /* InterfaceController.swift in Sources */,
