@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E0A66EE21C6EFF50010650F /* IOSFontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0A66ED21C6EFF50010650F /* IOSFontHelper.swift */; };
 		6E33BB542199D17F00C85EEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E33BB532199D17F00C85EEF /* AppDelegate.swift */; };
 		6E33BB562199D17F00C85EEF /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E33BB552199D17F00C85EEF /* FirstViewController.swift */; };
 		6E33BB582199D17F00C85EEF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E33BB572199D17F00C85EEF /* SecondViewController.swift */; };
@@ -93,6 +94,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6E0A66ED21C6EFF50010650F /* IOSFontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSFontHelper.swift; sourceTree = "<group>"; };
 		6E33BB502199D17F00C85EEF /* WhatsOnZwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsOnZwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E33BB532199D17F00C85EEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E33BB552199D17F00C85EEF /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				6E33BBA92199E0D000C85EEF /* AppointmentUtils.swift */,
 				6E3528352199EF51005C44EC /* Extensions.swift */,
 				6E3528372199F336005C44EC /* AppointmentCell.swift */,
+				6E0A66ED21C6EFF50010650F /* IOSFontHelper.swift */,
 			);
 			path = WhatsOnZwift;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 			files = (
 				6E33BBA02199D21600C85EEF /* ZwiftXmlParser.swift in Sources */,
 				6E3528382199F336005C44EC /* AppointmentCell.swift in Sources */,
+				6E0A66EE21C6EFF50010650F /* IOSFontHelper.swift in Sources */,
 				6E3528362199EF51005C44EC /* Extensions.swift in Sources */,
 				6E33BBAA2199E0D000C85EEF /* AppointmentUtils.swift in Sources */,
 				6E33BBA42199D36F00C85EEF /* Map.swift in Sources */,
