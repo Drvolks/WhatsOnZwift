@@ -30,9 +30,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's On Zwift?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oZj-7X-ALz">
-                                <rect key="frame" x="20" y="-14.5" width="335" height="239"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="200"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's On Zwift?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="oZj-7X-ALz">
+                                <rect key="frame" x="20" y="119.5" width="335" height="119.5"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="100"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -40,16 +40,17 @@
                         <color key="backgroundColor" red="0.30588235294117649" green="0.69019607843137254" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="oZj-7X-ALz" firstAttribute="leading" secondItem="1HT-ns-jF9" secondAttribute="leading" id="5c5-CZ-Ato"/>
-                            <constraint firstItem="1HT-ns-jF9" firstAttribute="top" secondItem="oZj-7X-ALz" secondAttribute="bottom" constant="10" id="9vb-bV-VJo"/>
                             <constraint firstItem="1HT-ns-jF9" firstAttribute="centerY" secondItem="PQr-Ze-W5v" secondAttribute="centerY" id="E1d-pv-opC"/>
                             <constraint firstItem="oZj-7X-ALz" firstAttribute="trailing" secondItem="1HT-ns-jF9" secondAttribute="trailing" id="Ijq-Kn-Oy6"/>
                             <constraint firstItem="WKo-ke-X62" firstAttribute="top" secondItem="1HT-ns-jF9" secondAttribute="top" id="LVk-uu-wbK"/>
+                            <constraint firstItem="1HT-ns-jF9" firstAttribute="firstBaseline" secondItem="oZj-7X-ALz" secondAttribute="baseline" constant="20" id="Loa-Vd-6EC"/>
                             <constraint firstItem="1HT-ns-jF9" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="OOK-3O-k5C"/>
+                            <constraint firstItem="1HT-ns-jF9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="70" id="ZZW-2d-kUE"/>
                             <constraint firstItem="WKo-ke-X62" firstAttribute="bottom" secondItem="1HT-ns-jF9" secondAttribute="bottom" id="fLy-Iw-6q7"/>
                             <constraint firstItem="WKo-ke-X62" firstAttribute="leading" secondItem="1HT-ns-jF9" secondAttribute="leading" constant="20" id="iMm-p5-v3i"/>
                             <constraint firstItem="WKo-ke-X62" firstAttribute="trailing" secondItem="1HT-ns-jF9" secondAttribute="trailing" constant="-20" id="u5s-3E-saz"/>
-                            <constraint firstItem="1HT-ns-jF9" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="xdr-Uw-XHz"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="1HT-ns-jF9" secondAttribute="trailing" constant="20" id="z7E-lN-yi8"/>
+                            <constraint firstItem="1HT-ns-jF9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="xdr-Uw-XHz"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1HT-ns-jF9" secondAttribute="trailing" constant="20" id="z7E-lN-yi8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
