@@ -11,6 +11,7 @@ import UIKit
 class SecondViewController: UITableViewController {
     
     var futurAppointments = [Appointment]()
+    @IBOutlet var table: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,8 @@ class SecondViewController: UITableViewController {
         let parser = ZwiftXmlParser()
         let appointments = parser.parse()
         futurAppointments = AppointmentUtils.getFutures(appointments: appointments)
+        
+        table.backgroundColor = UIColor(rgb: 0x4EB0C9)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
