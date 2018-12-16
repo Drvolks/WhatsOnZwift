@@ -19,8 +19,7 @@ class FirstViewController: UIViewController {
         let appointments = parser.parse()
         let currentAppointment = AppointmentUtils.getCurrent(appointments: appointments)
         
-        map.text = AppointmentUtils.getName(appointment: currentAppointment)
-        map.font = map.font.with(traits: [.traitBold, .traitItalic])
+        IOSFontHelper.setMapName(label: map, appointment: currentAppointment)
         mapImage.image = UIImage(named: currentAppointment.map.rawValue.lowercased())
     }
 }
