@@ -17,7 +17,7 @@
                         <group width="1" alignment="left" layout="overlap" id="fOK-rV-WYo">
                             <items>
                                 <imageView alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" id="1us-7A-Cmj"/>
-                                <label alignment="center" verticalAlignment="center" text="Label" textAlignment="center" baselineAdjustment="alignCenters" id="68J-E2-InO">
+                                <label alignment="center" verticalAlignment="center" text="Label" textAlignment="center" baselineAdjustment="alignCenters" minimumScaleFactor="0.5" id="68J-E2-InO">
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="boldSystem" pointSize="36"/>
                                 </label>
@@ -33,7 +33,7 @@
                                             <group width="1" alignment="left" layout="overlap" id="Tii-0r-8JU">
                                                 <items>
                                                     <imageView alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" id="f3u-oI-O5t"/>
-                                                    <label alignment="center" verticalAlignment="center" text="Label" textAlignment="center" baselineAdjustment="alignCenters" id="LE9-b0-fwG">
+                                                    <label alignment="center" verticalAlignment="center" text="Label" textAlignment="center" baselineAdjustment="alignCenters" minimumScaleFactor="0.5" id="LE9-b0-fwG">
                                                         <fontDescription key="font" type="boldSystem" pointSize="36"/>
                                                     </label>
                                                 </items>
