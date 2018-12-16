@@ -15,8 +15,10 @@ class AppointmentCell: UITableViewCell {
     @IBOutlet weak var map: UILabel!
     
     func fromAppointment(appointment: Appointment) {
-        map.text = AppointmentUtils.getName(appointment: appointment)
         mapImage.image = UIImage(named: appointment.map.rawValue.lowercased())
+        
+        map.text = AppointmentUtils.getName(appointment: appointment)
+        map.font = map.font.with(traits: [.traitBold, .traitItalic])
         
         if appointment.map != Map.UNKNOWN {
             let formatter = DateFormatter()
