@@ -15,7 +15,6 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var mapImage: WKInterfaceImage!
     @IBOutlet weak var futureTable: WKInterfaceTable!
     @IBOutlet weak var nextLabel: WKInterfaceLabel!
-    @IBOutlet weak var refreshImage: WKInterfaceImage!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -25,8 +24,7 @@ class InterfaceController: WKInterfaceController {
         super.willActivate()
         
         nextLabel.setHidden(true)
-        map.setHidden(true)
-        refreshImage.setHidden(false)
+        map.setText("Loading...")
         
         nextLabel.setHeight(CGFloat(50))
         
@@ -44,12 +42,11 @@ class InterfaceController: WKInterfaceController {
                 let currentAppointment = AppointmentUtils.getCurrent(appointments: appointments)
                 let futureAppointments = AppointmentUtils.getFutures(appointments: appointments)
                 
-                self.map.setText(AppointmentUtils.getName(appointment: currentAppointment))
+                WatchFontHelper.setMapText(label: self.map, appointment: currentAppointment)
+                
                 self.mapImage.setImage(UIImage(named: currentAppointment.map.rawValue.lowercased()))
                 
-                self.map.setHidden(false)
                 self.nextLabel.setHidden(false)
-                self.refreshImage.setHidden(true)
                 
                 self.futureTable.setNumberOfRows(futureAppointments.count, withRowType: "appointmentRow")
                 
