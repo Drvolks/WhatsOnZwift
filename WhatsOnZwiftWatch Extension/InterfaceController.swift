@@ -15,6 +15,10 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var mapImage: WKInterfaceImage!
     @IBOutlet weak var futureTable: WKInterfaceTable!
     @IBOutlet weak var nextLabel: WKInterfaceLabel!
+    @IBOutlet weak var upNextLabel: WKInterfaceLabel!
+    var countdownTimer: Timer!
+    var totalTime = 60
+    var nextAppointment:Appointment?
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -23,6 +27,7 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         super.willActivate()
         
+        upNextLabel.setHidden(true)
         nextLabel.setHidden(true)
         map.setText("Loading...")
         
@@ -41,6 +46,10 @@ class InterfaceController: WKInterfaceController {
                 let appointments = parser.parse()
                 let currentAppointment = AppointmentUtils.getCurrent(appointments: appointments)
                 let futureAppointments = AppointmentUtils.getFutures(appointments: appointments)
+                if(futureAppointments.count > 0) {
+                    self.nextAppointment = futureAppointments[0]
+                    self.startTimer()
+                }
                 
                 WatchFontHelper.setMapText(label: self.map, appointment: currentAppointment)
                 
@@ -62,4 +71,39 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    func startTimer() {
+        if let appointment = nextAppointment {
+            totalTime = AppointmentUtils.timeToNext(appointment: appointment, currentDate:Date())
+            
+            DispatchQueue.main.async {
+                self.countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
+            }
+        }
+    }
+    
+    @objc func updateTime() {
+        upNextLabel.setHidden(false)
+        upNextLabel.setText("\(timeFormatted(totalTime))")
+        
+        if totalTime != 0 {
+            totalTime -= 1
+        } else {
+            endTimer()
+        }
+    }
+    
+    func timeFormatted(_ totalSeconds: Int) -> String {
+        if let appointment = nextAppointment {
+            let map = AppointmentUtils.getName(appointment: appointment)
+            let timeToText = AppointmentUtils.timeToText(totalSeconds)
+            return map + " up next\n" + timeToText
+        }
+        
+        return ""
+    }
+    
+    func endTimer() {
+        countdownTimer.invalidate()
+        upNextLabel.setHidden(true)
+    }
 }

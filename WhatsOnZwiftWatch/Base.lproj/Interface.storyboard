@@ -23,6 +23,9 @@
                                 </label>
                             </items>
                         </group>
+                        <label width="1" alignment="left" text="Up text" textAlignment="center" numberOfLines="2" minimumScaleFactor="0.5" id="Sed-wO-KDV">
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                        </label>
                         <label alignment="left" text="What's next" id="bBs-1k-aT5"/>
                         <table alignment="left" id="6Yu-WD-gst">
                             <items>
@@ -54,6 +57,7 @@
                         <outlet property="map" destination="68J-E2-InO" id="2Wi-Zh-Wp4"/>
                         <outlet property="mapImage" destination="1us-7A-Cmj" id="1vb-dw-Lga"/>
                         <outlet property="nextLabel" destination="bBs-1k-aT5" id="692-fa-DEC"/>
+                        <outlet property="upNextLabel" destination="Sed-wO-KDV" id="eTt-8Q-IXe"/>
                     </connections>
                 </controller>
             </objects>
