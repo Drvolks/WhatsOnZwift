@@ -41,6 +41,8 @@ class FirstViewController: UIViewController {
         if let appointment = nextAppointment {
             totalTime = AppointmentUtils.timeToNext(appointment: appointment, currentDate:Date())
             
+            updateTime()
+            
             countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         }
     }
