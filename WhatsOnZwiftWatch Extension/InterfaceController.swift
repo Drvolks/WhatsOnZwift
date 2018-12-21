@@ -76,6 +76,8 @@ class InterfaceController: WKInterfaceController {
             totalTime = AppointmentUtils.timeToNext(appointment: appointment, currentDate:Date())
             
             DispatchQueue.main.async {
+                self.updateTime()
+                
                 self.countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
             }
         }
