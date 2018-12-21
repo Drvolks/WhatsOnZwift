@@ -28,14 +28,13 @@ class FirstViewController: UIViewController {
         let nextAppointments = AppointmentUtils.getFutures(appointments: appointments)
         if(nextAppointments.count > 0) {
             nextAppointment = nextAppointments[0]
+            startTimer()
         }
         
         whatsOnZwift.font = whatsOnZwift.font.with(traits: [.traitBold, .traitItalic])
         timeToNextMap.font = timeToNextMap.font.with(traits: [.traitBold, .traitItalic])
         IOSFontHelper.setMapName(label: map, appointment: currentAppointment)
         mapImage.image = UIImage(named: currentAppointment.map.rawValue.lowercased())
-        
-        startTimer()
     }
     
     func startTimer() {
