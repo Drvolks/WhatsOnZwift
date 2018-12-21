@@ -40,24 +40,17 @@ class FirstViewController: UIViewController {
     
     func startTimer() {
         if let appointment = nextAppointment {
-            let targetDate = appointment.start
-            timeToNextMap.isHidden = false
-
-            let calendar = Calendar.current.dateComponents([.day, .hour, .minute, .second], from: Date(), to: targetDate)
-            let days = calendar.day!
-            let hours = calendar.hour!
-            let minutes = calendar.minute!
-            let seconds = calendar.second!
-            totalTime = hours * 60 * 60 + minutes * 60 + seconds
-            totalTime = days * 60 * 60 * 24 + totalTime
+            totalTime = AppointmentUtils.timeToNext(appointment: appointment, currentDate:Date())
             
             countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-        } else {
-            timeToNextMap.isHidden = true
         }
     }
     
     @objc func updateTime() {
+        if timeToNextMap.isHidden {
+            timeToNextMap.isHidden = false
+        }
+        
         timeToNextMap.text = "\(timeFormatted(totalTime))"
         
         if totalTime != 0 {
@@ -68,25 +61,13 @@ class FirstViewController: UIViewController {
     }
     
     func timeFormatted(_ totalSeconds: Int) -> String {
-        var map = ""
         if let appointment = nextAppointment {
-            map = AppointmentUtils.getName(appointment: appointment)
+            let map = AppointmentUtils.getName(appointment: appointment)
+            let timeToText = AppointmentUtils.timeToText(totalSeconds)
+            return map + " up next in " + timeToText
         }
         
-        let seconds: Int = totalSeconds % 60
-        let minutes: Int = (totalSeconds / 60) % 60
-        let hours: Int = (totalSeconds / 60 / 60) % 24
-        let days: Int = (totalSeconds / 60 / 60 / 24)
-        
-        let result:String
-        
-        if(days > 0) {
-           result = String(format: "%dD %02dH %02dM %02dS", days, hours, minutes, seconds)
-        } else {
-            result = String(format: "%02dH %02dM %02dS", hours, minutes, seconds)
-        }
-        
-        return map + " up next in " + result
+        return ""
     }
     
     func endTimer() {

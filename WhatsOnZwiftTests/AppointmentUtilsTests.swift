@@ -91,4 +91,30 @@ class AppointmentUtilsTests: XCTestCase {
         result = AppointmentUtils.getName(appointment: appointment)
         XCTAssertEqual("", result)
     }
+    
+    func testTimeToNext() {
+        let futures = AppointmentUtils.getFutures(currentDate: currentDate, appointments: appointments)
+        let appointment = futures[0]
+        
+        var result = AppointmentUtils.timeToNext(appointment: appointment, currentDate: currentDate)
+        XCTAssertEqual(86400, result)
+        
+        currentDate = parser.parseDate(dateString: "2018-11-07T12:01-04")
+        result = AppointmentUtils.timeToNext(appointment: appointment, currentDate: currentDate)
+        XCTAssertEqual(43200, result)
+    }
+    
+    func testTimeToText() {
+        var result = AppointmentUtils.timeToText(40 + (46*60) + (1*60*60) + (1*60*60*24))
+        XCTAssertEqual("1D 01H 46M 40S", result)
+        
+        result = AppointmentUtils.timeToText(40 + (46*60) + (1*60*60))
+        XCTAssertEqual("01H 46M 40S", result)
+        
+        result = AppointmentUtils.timeToText(0)
+        XCTAssertEqual("00H 00M 00S", result)
+        
+        result = AppointmentUtils.timeToText(-1)
+        XCTAssertEqual("", result)
+    }
 }
