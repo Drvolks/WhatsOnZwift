@@ -20,6 +20,8 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        timeToNextMap.isHidden = true
+        
         let parser = ZwiftXmlParser()
         let appointments = parser.parse()
         let currentAppointment = AppointmentUtils.getCurrent(appointments: appointments)
