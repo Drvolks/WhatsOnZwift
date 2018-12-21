@@ -13,7 +13,7 @@ class ZwiftXmlParser : XmlParserBase {
     static let appointmentElementName = "appointment"
     static let mapAttribute = "map"
     static let startAttribute = "start"
-    static let dateFormat =  "yyyy-MM-dd'T'hh:mmX"
+    static let dateFormat =  "yyyy-MM-dd'T'HH:mmX"
 
     var parser:XMLParser
     var appointments = [Appointment]()

@@ -76,4 +76,39 @@ class AppointmentUtils {
             return appointment.map.rawValue.capitalizingFirstLetter()
         }
     }
+    
+    static func timeToNext(appointment:Appointment, currentDate:Date) -> Int {
+        let targetDate = appointment.start
+        
+        let calendar = Calendar.current.dateComponents([.day, .hour, .minute, .second], from: currentDate, to: targetDate)
+        let days = calendar.day!
+        let hours = calendar.hour!
+        let minutes = calendar.minute!
+        let seconds = calendar.second!
+        var totalTime = hours * 60 * 60 + minutes * 60 + seconds
+        totalTime = days * 60 * 60 * 24 + totalTime
+        
+        return totalTime
+    }
+    
+    static func timeToText(_ totalSeconds: Int) -> String {
+        if totalSeconds < 0 {
+            return ""
+        }
+        
+        let seconds: Int = totalSeconds % 60
+        let minutes: Int = (totalSeconds / 60) % 60
+        let hours: Int = (totalSeconds / 60 / 60) % 24
+        let days: Int = (totalSeconds / 60 / 60 / 24)
+        
+        let result:String
+        
+        if(days > 0) {
+            result = String(format: "%dD %02dH %02dM %02dS", days, hours, minutes, seconds)
+        } else {
+            result = String(format: "%02dH %02dM %02dS", hours, minutes, seconds)
+        }
+        
+        return result
+    }
 }
