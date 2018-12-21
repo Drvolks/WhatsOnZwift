@@ -32,8 +32,8 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's On Zwift?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="oZj-7X-ALz">
                                 <rect key="frame" x="20" y="119" width="335" height="120"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="100"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Provided by https://whatsonzwift.com" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lZI-pM-bvS">
@@ -50,20 +50,30 @@
                                     <fragment content="provided by"/>
                                 </attributedString>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="3hG-Su-bgM">
+                                <rect key="frame" x="20" y="435" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.30588235294117649" green="0.69019607843137254" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="oZj-7X-ALz" firstAttribute="leading" secondItem="1HT-ns-jF9" secondAttribute="leading" id="5c5-CZ-Ato"/>
                             <constraint firstItem="1HT-ns-jF9" firstAttribute="centerY" secondItem="PQr-Ze-W5v" secondAttribute="centerY" id="E1d-pv-opC"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="lZI-pM-bvS" secondAttribute="trailing" constant="20" id="FQY-fw-5cX"/>
+                            <constraint firstItem="3hG-Su-bgM" firstAttribute="top" secondItem="WKo-ke-X62" secondAttribute="bottom" constant="31.5" id="IhU-9J-lhe"/>
                             <constraint firstItem="oZj-7X-ALz" firstAttribute="trailing" secondItem="1HT-ns-jF9" secondAttribute="trailing" id="Ijq-Kn-Oy6"/>
                             <constraint firstItem="WKo-ke-X62" firstAttribute="top" secondItem="1HT-ns-jF9" secondAttribute="top" id="LVk-uu-wbK"/>
                             <constraint firstItem="1HT-ns-jF9" firstAttribute="firstBaseline" secondItem="oZj-7X-ALz" secondAttribute="baseline" constant="20" id="Loa-Vd-6EC"/>
                             <constraint firstItem="1HT-ns-jF9" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="OOK-3O-k5C"/>
                             <constraint firstItem="lZI-pM-bvS" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="Tq0-f1-tb7"/>
+                            <constraint firstItem="3hG-Su-bgM" firstAttribute="leading" secondItem="oZj-7X-ALz" secondAttribute="leading" id="USw-Da-qld"/>
                             <constraint firstItem="1HT-ns-jF9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="70" id="ZZW-2d-kUE"/>
                             <constraint firstItem="WKo-ke-X62" firstAttribute="bottom" secondItem="1HT-ns-jF9" secondAttribute="bottom" id="fLy-Iw-6q7"/>
                             <constraint firstItem="WKo-ke-X62" firstAttribute="leading" secondItem="1HT-ns-jF9" secondAttribute="leading" constant="20" id="iMm-p5-v3i"/>
+                            <constraint firstItem="3hG-Su-bgM" firstAttribute="trailing" secondItem="oZj-7X-ALz" secondAttribute="trailing" id="ljn-Jz-5ax"/>
+                            <constraint firstItem="lZI-pM-bvS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3hG-Su-bgM" secondAttribute="bottom" constant="1" id="mQT-wf-0w9"/>
                             <constraint firstItem="WKo-ke-X62" firstAttribute="trailing" secondItem="1HT-ns-jF9" secondAttribute="trailing" constant="-20" id="u5s-3E-saz"/>
                             <constraint firstItem="1HT-ns-jF9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="xdr-Uw-XHz"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="lZI-pM-bvS" secondAttribute="bottom" constant="20" id="xlh-ha-LUV"/>
@@ -75,6 +85,8 @@
                     <connections>
                         <outlet property="map" destination="WKo-ke-X62" id="wJi-wi-VAJ"/>
                         <outlet property="mapImage" destination="1HT-ns-jF9" id="wjZ-qH-L48"/>
+                        <outlet property="timeToNextMap" destination="3hG-Su-bgM" id="sHy-OY-HVV"/>
+                        <outlet property="whatsOnZwift" destination="oZj-7X-ALz" id="0Jh-3O-etQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
