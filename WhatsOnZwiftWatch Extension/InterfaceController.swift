@@ -22,17 +22,17 @@ class InterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-    }
-    
-    override func willActivate() {
-        super.willActivate()
         
         upNextLabel.setHidden(true)
         nextLabel.setHidden(true)
         map.setText("Loading...")
         
         nextLabel.setHeight(CGFloat(50))
-        
+    }
+    
+    override func willActivate() {
+        super.willActivate()
+      
         let url = URL(string:ZwiftXmlParser.urlString)!
         var request = URLRequest(url: url)
         request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringLocalCacheData
@@ -73,7 +73,11 @@ class InterfaceController: WKInterfaceController {
 
     func startTimer() {
         if let appointment = nextAppointment {
-            totalTime = AppointmentUtils.timeToNext(appointment: appointment, currentDate:Date())
+            self.totalTime = AppointmentUtils.timeToNext(appointment: appointment, currentDate:Date())
+            
+            if let timer = self.countdownTimer {
+                timer.invalidate()
+            }
             
             DispatchQueue.main.async {
                 self.updateTime()
