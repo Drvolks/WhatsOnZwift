@@ -21,7 +21,12 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         
         timeToNextMap.isHidden = true
+        refresh()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: UIApplication.willEnterForegroundNotification, object: nil)
+    }
+    
+    @objc func refresh() {
         let parser = ZwiftXmlParser()
         let appointments = parser.parse()
         let currentAppointment = AppointmentUtils.getCurrent(appointments: appointments)
@@ -42,6 +47,10 @@ class FirstViewController: UIViewController {
             totalTime = AppointmentUtils.timeToNext(appointment: appointment, currentDate:Date())
             
             updateTime()
+            
+            if let timer = countdownTimer {
+                timer.invalidate()
+            }
             
             countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         }
