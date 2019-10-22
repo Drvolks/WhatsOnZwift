@@ -334,6 +334,7 @@
 				TargetAttributes = {
 					6E33BB4F2199D17F00C85EEF = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1110;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -345,6 +346,7 @@
 					};
 					6E33BB652199D18100C85EEF = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1110;
 						TestTargetID = 6E33BB4F2199D17F00C85EEF;
 					};
 					6E33BB792199D1CB00C85EEF = {
@@ -352,6 +354,7 @@
 					};
 					6E33BB852199D1CC00C85EEF = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -650,7 +653,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ca.consultationmassawippi.WhatsOnZwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -674,7 +677,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ca.consultationmassawippi.WhatsOnZwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -696,7 +699,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ca.consultationmassawippi.WhatsOnZwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhatsOnZwift.app/WhatsOnZwift";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -719,7 +722,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ca.consultationmassawippi.WhatsOnZwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhatsOnZwift.app/WhatsOnZwift";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -744,7 +747,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 				WATCHOS_DEPLOYMENT_TARGET = 6.0;
@@ -769,7 +772,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 				WATCHOS_DEPLOYMENT_TARGET = 6.0;
