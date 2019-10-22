@@ -14,5 +14,6 @@ enum Map : String {
     case INNSBRUCK
     case NEWYORK
     case RICHMOND
+    case YORKSHIRE
     case UNKNOWN
 }
