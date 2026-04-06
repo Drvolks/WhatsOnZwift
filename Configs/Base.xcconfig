@@ -1,0 +1,6 @@
+// Base.xcconfig
+// Shared build settings for all configurations.
+
+#include "Secret.xcconfig"
+
+PRODUCT_BUNDLE_IDENTIFIER = $(BUNDLE_ID_PREFIX).WhatsOnZwift
